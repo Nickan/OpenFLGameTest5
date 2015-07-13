@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<window background="#0x000000" fps="30" />
+	<window width="500" height="440"/>
+	<haxelib name="actuate" />
+	
+	<meta title="OpenFLGameTest5" package="com.sample.openflgametest5" version="1.0.0" company="Company Name" />
+	<app main="Main" path="Export" file="OpenFLGameTest5" />
+	
+	<source path="Source" />
+	
+	<haxelib name="openfl" />
+	
+	<assets path="Assets" rename="assets" exclude="openfl.svg" />
+	<icon path="Assets/openfl.svg" />
+	
+</project>
