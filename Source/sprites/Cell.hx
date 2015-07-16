@@ -149,8 +149,8 @@ class Cell extends Sprite
 		}
 		
 		//... Test
-		if (_coverBitmap != null)
-			_coverBitmap.alpha = 0.2;
+		//if (_coverBitmap != null)
+			//_coverBitmap.alpha = 0.2;
 	}
 	
 	function removeCover() 
