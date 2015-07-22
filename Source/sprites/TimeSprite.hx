@@ -44,6 +44,7 @@ class TimeSprite extends Sprite
 		_minuteTextField.defaultTextFormat = textFormat;
 		_minuteTextField.text = "";
 		_minuteTextField.autoSize = TextFieldAutoSize.RIGHT;
+		
 		_minuteTextField.x = stage.stageWidth * 0.05;
 		
 		_secondsTextField = new TextField();
@@ -75,11 +76,16 @@ class TimeSprite extends Sprite
 	
 	function updateDisplayedTime() 
 	{
-		var minutes = Std.int(timeInSeconds / 60);
+		var minutes = Std.int(timeInSeconds / 601);
 		var seconds = Std.int(timeInSeconds % 60);
 		var minStr = "";
 		var secStr = "";
 		_minuteTextField.text = "" + minutes;
+		
+		#if html5
+			_minuteTextField.x = _secondsTextField.x - (_minuteTextField.width * 0.95);
+		#end
+		
 		if (seconds < 10)
 			_secondsTextField.text = ":0" + seconds;
 		else

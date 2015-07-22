@@ -125,7 +125,11 @@ class Cell extends Sprite
 			addChild(_textField);
 		}
 		
-		var textFormat = new TextFormat("Verdana", 30, 0xFFFFFF);
+		var textSize :Float = 30;
+		#if html5
+			textSize = 20;
+		#end
+		var textFormat = new TextFormat("Verdana", textSize, 0xFFFFFF);
 		
 		_textField = new TextField();
 		_textField.text = string;

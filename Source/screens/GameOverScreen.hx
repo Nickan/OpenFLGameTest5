@@ -80,6 +80,7 @@ class GameOverScreen extends Sprite
 		addChild(flaggedMinesSprite);
 		flaggedMinesSprite.x = stage.stageWidth * 0.2 - (flaggedMinesSprite.width * 0.5);
 		flaggedMinesSprite.y = stage.stageHeight * 0.1 - (flaggedMinesSprite.height * 0.5);
+
 		if (_won)
 			flaggedMinesSprite.showText("You Won!");
 		else

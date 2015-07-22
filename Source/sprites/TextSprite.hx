@@ -50,5 +50,8 @@ class TextSprite extends Sprite
 		if (_textField.text == text)
 			return;
 		_textField.text = text;
+		#if html5
+			_textField.width = stage.width;
+		#end
 	}
 }
